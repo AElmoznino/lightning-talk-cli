@@ -19,9 +19,12 @@ $ lightning-talk-cli --help
     $ lightning-talk-cli
 
   Options
-    --name  Your name
+    --numberOfTalks  Number of topics to generate
 
   Examples
-    $ lightning-talk-cli --name=Jane
-    Hello, Jane
+    $ lightning-talk-cli --numberOfTalks=3
+    Here is a list of suggested topics to talk about:
+    How Git will change your life
+    My key lessons learned from working with React
+    The latest news about CSS
 ```
