@@ -17,7 +17,9 @@ const cli = (0, meow_1.default)(`
 
 	Examples
 	  $ lightning-talk-cli --numberOfTalks=3
-	  Your talks will list here
+	  Your 1st talk will list here
+	  Your 2nd talk will list here
+	  Your 3rd talk will list here
 `, {
     flags: {
         numberOfTalks: {

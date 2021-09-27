@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Newline, Text } from "ink";
-import { randomIntegerInRange } from "./utils";
+import { randomHexColorCode, randomIntegerInRange } from "./utils";
 import { keywords, replaceWord, sentences } from "./data";
 
 const sentence = (): string => {
@@ -24,8 +24,9 @@ const App: FC<{ numberOfTalks?: number }> = ({ numberOfTalks = 1 }) => {
 	}
 	return (
 		<Text>
+			Here is a list of suggested topics to talk about: <Newline/>
 			{generatedSentences.map((s, i) => (
-				<Text key={i}>
+				<Text color={randomHexColorCode()} key={i}>
 					{s}
 					<Newline />
 				</Text>

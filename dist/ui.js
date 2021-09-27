@@ -19,9 +19,12 @@ const App = ({ numberOfTalks = 1 }) => {
             "You should talk about: ",
             react_1.default.createElement(ink_1.Text, { color: "green" }, sentence())));
     }
-    return (react_1.default.createElement(ink_1.Text, null, generatedSentences.map((s, i) => (react_1.default.createElement(ink_1.Text, { key: i },
-        s,
-        react_1.default.createElement(ink_1.Newline, null))))));
+    return (react_1.default.createElement(ink_1.Text, null,
+        "Here is a list of suggested topics to talk about: ",
+        react_1.default.createElement(ink_1.Newline, null),
+        generatedSentences.map((s, i) => (react_1.default.createElement(ink_1.Text, { color: (0, utils_1.randomHexColorCode)(), key: i },
+            s,
+            react_1.default.createElement(ink_1.Newline, null))))));
 };
 module.exports = App;
 exports.default = App;
