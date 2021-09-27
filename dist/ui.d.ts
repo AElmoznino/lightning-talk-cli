@@ -1,5 +1,5 @@
-import { FC } from 'react';
+import { FC } from "react";
 declare const App: FC<{
-    name?: string;
+    numberOfTalks?: number;
 }>;
 export default App;

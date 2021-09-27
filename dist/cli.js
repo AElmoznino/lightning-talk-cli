@@ -13,16 +13,16 @@ const cli = (0, meow_1.default)(`
 	  $ lightning-talk-cli
 
 	Options
-		--name  Your name
+		--numberOfTalks  Number of talks to generate
 
 	Examples
-	  $ lightning-talk-cli --name=Jane
-	  Hello, Jane
+	  $ lightning-talk-cli --numberOfTalks=3
+	  Your talks will list here
 `, {
     flags: {
-        name: {
-            type: 'string'
+        numberOfTalks: {
+            type: 'number'
         }
     }
 });
-(0, ink_1.render)(react_1.default.createElement(ui_1.default, { name: cli.flags.name }));
+(0, ink_1.render)(react_1.default.createElement(ui_1.default, { numberOfTalks: cli.flags.numberOfTalks }));

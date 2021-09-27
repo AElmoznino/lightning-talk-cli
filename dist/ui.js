@@ -12,8 +12,16 @@ const sentence = () => {
     const sentence = data_1.sentences[(0, utils_1.randomIntegerInRange)(0, data_1.sentences.length - 1)];
     return sentence.replace(data_1.replaceWord, keyword);
 };
-const App = () => (react_1.default.createElement(ink_1.Text, null,
-    "You should talk about: ",
-    react_1.default.createElement(ink_1.Text, { color: "green" }, sentence())));
+const App = ({ numberOfTalks = 1 }) => {
+    const generatedSentences = [...Array(numberOfTalks)].map(() => sentence());
+    if (numberOfTalks === 1) {
+        return (react_1.default.createElement(ink_1.Text, null,
+            "You should talk about: ",
+            react_1.default.createElement(ink_1.Text, { color: "green" }, sentence())));
+    }
+    return (react_1.default.createElement(ink_1.Text, null, generatedSentences.map((s, i) => (react_1.default.createElement(ink_1.Text, { key: i },
+        s,
+        react_1.default.createElement(ink_1.Newline, null))))));
+};
 module.exports = App;
 exports.default = App;
